@@ -1,0 +1,13 @@
+{
+  "name": "gota",
+  "description": "A Whatsapp md bot built in NodeJs to make experience better",
+  "keywords": ["nodejs", "bot", "whatsapp bot", "Zero-Two", "SecktorBot", "Secktor","SecktorMD","theme bot","multi device","baileys","Sam Pandey"],
+  "success_url": "/",
+  "stack": "container",
+"formation": {
+		"worker": {
+			"quantity": 1,
+			"size": "basic"
+		}
+	}
+}
