@@ -3,7 +3,7 @@
 "version": "1.0.2", 
 "description": "Super Bot WhatsApp",
 "main": "index.js",
-"type": ".mjs",
+"type": "module",
     
 "directories": {
 "lib": "lib",
