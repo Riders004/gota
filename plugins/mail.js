@@ -31,7 +31,7 @@ let handler = async (m, {
 handler.help = ["dropmail"];
 handler.tags = ["misc"];
 handler.command = /^dropmail(get)?$/i;
-module.exports = handler;
+export default handler
 
 async function random_mail() {
     const link = "https://dropmail.me/api/graphql/web-test-wgq6m5i?query=mutation%20%7BintroduceSession%20%7Bid%2C%20expiresAt%2C%20addresses%20%7Baddress%7D%7D%7D";
