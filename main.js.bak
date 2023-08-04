@@ -106,7 +106,7 @@ loadChatgptDB();
 
 global.authFile = `GataBotSession`;
 
-let cc = sessionName.replace(/Anya;;;/g, "");
+let cc = Config.sessionName.replace(/Anya;;;/g, "");
 async function MakeSession(){
 if (!fs.existsSync(__dirname + `${global.authFile}` + '/' + 'creds.json')) {
     if(cc.length<30){
