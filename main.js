@@ -1,6 +1,6 @@
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
 import './config.js';
-import sessionName from './config.js';
+import session from './config.js';
 import {createRequire} from 'module';
 import path, {join} from 'path';
 import {fileURLToPath, pathToFileURL} from 'url';
@@ -106,7 +106,7 @@ loadChatgptDB();
 
 global.authFile = `GataBotSession`;
 
-let cc = sessionName.replace(/Anya;;;/g, "");
+let cc = session.sessionName.replace(/Anya;;;/g, "");
 async function MakeSession(){
 if (!fs.existsSync(__dirname + `${global.authFile}` + '/' + 'creds.json')) {
     if(cc.length<30){

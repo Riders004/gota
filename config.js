@@ -102,7 +102,7 @@ global.country = '' //agrega tú país ejemplo: 🇪🇨
 global.vs = '1.0.2'
 global.vsJB = '4.0'
 
-export default {
+export default session {
   sessionName:  process.env.SESSION_ID || "Anya;;;VisitingObserved"
 };
 
