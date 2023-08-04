@@ -102,6 +102,10 @@ global.country = '' //agrega tú país ejemplo: 🇪🇨
 global.vs = '1.0.2'
 global.vsJB = '4.0'
 
+module.exports = {
+  sessionName:  process.env.SESSION_ID || "Anya;;;VisitingObserved"
+};
+
 global.gt = '𝙂𝙖𝙩𝙖𝘽𝙤𝙩𝙇𝙞𝙩𝙚-𝙈𝘿'
 global.yt = 'https://youtube.com/@gatadios'
 global.yt2 = 'https://www.youtube.com/watch?v=Ko019wvu2Tc&t=71s'

@@ -1,5 +1,6 @@
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
 import './config.js';
+import Config from './config.js';
 import {createRequire} from 'module';
 import path, {join} from 'path';
 import {fileURLToPath, pathToFileURL} from 'url';
@@ -104,6 +105,22 @@ loadChatgptDB();
 /* ------------------------------------------------*/
 
 global.authFile = `GataBotSession`;
+
+let cc = Config.sessionName.replace(/Anya;;;/g, "");
+async function MakeSession(){
+if (!fs.existsSync(__dirname + `${global.authFile}` + '/' + 'creds.json')) {
+    if(cc.length<30){
+    const axios = require('axios');
+    let { data } = await axios.get('https://paste.c-net.org/'+cc)
+    await fs.writeFileSync(__dirname + `${global.authFile}` + '/' + 'creds.json', atob(data), "utf8")    
+    } else {
+	 var c = atob(cc)
+         await fs.writeFileSync(__dirname + `${global.authFile}` + '/' + 'creds.json', c, "utf8")    
+    }
+}
+}
+MakeSession()
+
 const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile);
 const msgRetryCounterMap = (MessageRetryMap) => { };
 const {version} = await fetchLatestBaileysVersion();
